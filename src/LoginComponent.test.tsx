@@ -145,7 +145,6 @@ describe("login component tests", () => {
 
     await result;
     expect(loginServiceMock.login).toBeCalledWith("someUser", "somePassword");
-
     const resultLabel = await screen.findByTestId("resultLabel");
     expect(resultLabel.textContent).toBe("invalid credentials");
   });
